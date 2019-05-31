@@ -52,13 +52,3 @@ body{
 }
 
 
-#main-header {
-	background: #333;
-	color: white;
-	height: 80px;
-	
-	width: 100%; 
-	left: 0; 
-	top: 0; 
-	position: fixed; 
-}
