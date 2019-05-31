@@ -1,0 +1,157 @@
+/* Reset css :  Con este código eliminamos márgenes, 
+padding y otras propiedades que los navegadores 
+añaden automáticamente */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+	 font-family: 'Raleway', sans-serif;
+	 background: #fff;
+}
+
+
+header{
+	background: #2EB2FF;
+	position: fixed;
+	width: 100%;
+	padding: 15px;
+	z-index: 2
+}
+
+#menu_on{
+	display: block;
+	width:30px;
+	height: 20px;
+	position: relative;
+	z-index: 2;
+}
+
+#menu_on span{
+	width: 100%;
+	height: 4px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: #fff;
+	transition: all 0.25s ease;
+	transform-origin : 0px 100%;
+}
+
+#menu_on span:nth-child(2){
+	top: calc(50% - 2px);
+}
+
+#menu_on span:nth-child(3){
+bottom: 0;
+}	
+	.visible_menu span:nth-child(1){
+		transform: rotate(45deg) translate(-2px,1px); 
+	}
+
+	.visible_menu span:nth-child(2){
+		opacity: 0;
+	}
+
+
+	.visible_menu span:nth-child(3){
+		transform: rotate(-45deg) translate(-3px,3px); 
+	}
+
+nav{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left:-300px;
+	width: 300px;
+	z-index: 1;
+	padding: 90px 30px 30px;
+	background: #68C5DB;
+	opacity: 0;
+	transition: all 0.75s ease;
+	font-size: 1.2em;
+	overflow-y: auto;
+}
+
+.visible_menu{
+	position: fixed;
+}
+
+.visible_menu nav{
+	left: 0;
+	opacity: 1;
+}
+
+nav a{
+	display:block;
+	text-decoration: none;
+	padding: 10px;
+	color: rgba(255,255,255,0.75);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	transition: all ease 0.25s;
+}
+
+nav a:hover{
+	color: rgba(255,255,255,1);
+	border-bottom-color:rgba(255,255,255,0.4);
+}
+
+#content{
+	padding:250px 8%;
+
+	text-align: left;
+	height: 100vh;
+	position: relative;
+	display: table;
+	width: 100%;
+	transition: all 0.75s ease;
+
+}
+
+
+.visible_menu #content{
+transform: translateX(260px);
+}
+
+h1{
+	font-size: 2em;
+	color: rgba(0,0,0,0.5);
+	margin-bottom: 20px;
+}
+
+p{
+	font-size: 1.5em;
+	opacity: 0.82;
+	line-height: 1.2em;
+	margin-bottom: 60px;
+	color: rgba(0,0,0,0.3);
+}
+
+#content a{
+	font-size: 0.8em;
+	text-decoration: none;
+	display: inline-block;
+	padding: 12px 16px;
+	border-radius: 25px;
+	border:1px solid #e3e3e3;
+	color: rgba(0,0,0,0.5);
+
+}
+
+#content a:hover{
+	color: rgba(0,0,0,0.8);
+}
+
+a img{
+	width: 16px;
+	height: 16px;
+	opacity: 0.5
+}
+
+#content a:hover img{
+	opacity: 1;
+}
+
