@@ -51,27 +51,7 @@ body{
     
 }
 
-ul a {
-    color: #F7F7F7;
-    text-decoration: none;
-	
-}
 
-li {
-    list-style: none;
-    font-size: 1rem;
-    text-align: center;
-	align-items: center;
-	align-content: center;
-    padding: 0 3rem;
-    margin: 1rem 0;
-}
-
-li:hover {
-    color: white;
-    border: solid white;
-    border-width: 0 0.1rem;
-}
 #main-header {
 	background: #333;
 	color: white;
